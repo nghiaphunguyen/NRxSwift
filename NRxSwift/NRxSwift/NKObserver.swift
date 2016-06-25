@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 public protocol NKObserver {
-    func nk_setResult(result: Any?)
+    func nk_setValue(value: Any?)
     func nk_setError(error: ErrorType)
 }
 
@@ -22,8 +22,8 @@ public class NKObserverImpl: NKObserver {
         self.observer = observer
     }
     
-    public func nk_setResult(result: Any?) {
-        self.observer?.nk_setValue(result)
+    public func nk_setValue(value: Any?) {
+        self.observer?.nk_setValue(value)
     }
     
     public func nk_setError(error: ErrorType) {
