@@ -1,4 +1,4 @@
-# NRxSwift 0.1
+# NRxSwift 0.1.1
 **NRxSwift** provides NKObservable - un-interrupted observable. It is extened from [RxSwift](https://github.com/ReactiveX/RxSwift)
 
 **This library will bring the [Bolts](https://github.com/BoltsFramework/Bolts-ObjC) concept to Rx**
@@ -35,7 +35,7 @@ NKObservable.nk_just(1)
 NKObservable.nk_error(Error.SomeErrorType)
 
 NKObservable.nk_create { (observer) in
-            observer.nk_setResult("Success")
+            observer.nk_setValue("Success")
         }
 ```
 
