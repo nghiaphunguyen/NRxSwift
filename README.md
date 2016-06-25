@@ -1,7 +1,7 @@
 # NRxSwift 0.1
-**NRxSwift** provides NKObservable - un-interrupted observable. It extened from [RxSwift](https://github.com/ReactiveX/RxSwift)
+**NRxSwift** provides NKObservable - un-interrupted observable. It is extened from [RxSwift](https://github.com/ReactiveX/RxSwift)
 
-** This library will bring the [Bolts](https://github.com/BoltsFramework/Bolts-ObjC) concept to Rx **
+**This library will bring the [Bolts](https://github.com/BoltsFramework/Bolts-ObjC) concept to Rx**
 
 # CHANGE LOG
 
