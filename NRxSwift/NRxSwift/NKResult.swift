@@ -16,13 +16,13 @@ public typealias NKObservable = Observable<NKResult>
 
 public class NKResult: AnyObject {
     
-    private(set) var value: Any? {
+    public private(set) var value: Any? {
         didSet {
             self.type = self.value.dynamicType.self
         }
     }
-    private(set) var type: Any.Type?
-    private(set) var error: ErrorType?
+    public private(set) var type: Any.Type?
+    public private(set) var error: ErrorType?
     
     public static var Empty: NKResult {
         return NKResult()
