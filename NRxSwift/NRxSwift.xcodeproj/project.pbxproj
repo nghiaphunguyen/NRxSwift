@@ -16,6 +16,8 @@
 		1815E45F1D1ED59700C1B887 /* Variable+NKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815E45E1D1ED59700C1B887 /* Variable+NKit.swift */; };
 		1815E4611D1ED5E300C1B887 /* AnyObserver+NKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815E4601D1ED5E300C1B887 /* AnyObserver+NKit.swift */; };
 		1815E4631D1ED74C00C1B887 /* NKObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815E4621D1ED74C00C1B887 /* NKObserver.swift */; };
+		18C374A51D3645C300E72A20 /* UIView+NRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C374A41D3645C300E72A20 /* UIView+NRx.swift */; };
+		18C374A71D36461800E72A20 /* UIViewController+NRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C374A61D36461800E72A20 /* UIViewController+NRx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		1815E45E1D1ED59700C1B887 /* Variable+NKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Variable+NKit.swift"; sourceTree = "<group>"; };
 		1815E4601D1ED5E300C1B887 /* AnyObserver+NKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyObserver+NKit.swift"; sourceTree = "<group>"; };
 		1815E4621D1ED74C00C1B887 /* NKObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKObserver.swift; sourceTree = "<group>"; };
+		18C374A41D3645C300E72A20 /* UIView+NRx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NRx.swift"; sourceTree = "<group>"; };
+		18C374A61D36461800E72A20 /* UIViewController+NRx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NRx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				1815E45E1D1ED59700C1B887 /* Variable+NKit.swift */,
 				1815E4601D1ED5E300C1B887 /* AnyObserver+NKit.swift */,
 				1815E4621D1ED74C00C1B887 /* NKObserver.swift */,
+				18C374A41D3645C300E72A20 /* UIView+NRx.swift */,
+				18C374A61D36461800E72A20 /* UIViewController+NRx.swift */,
 			);
 			path = NRxSwift;
 			sourceTree = "<group>";
@@ -213,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C374A71D36461800E72A20 /* UIViewController+NRx.swift in Sources */,
 				1815E45F1D1ED59700C1B887 /* Variable+NKit.swift in Sources */,
 				1815E4631D1ED74C00C1B887 /* NKObserver.swift in Sources */,
+				18C374A51D3645C300E72A20 /* UIView+NRx.swift in Sources */,
 				1815E45D1D1ED56B00C1B887 /* Observable+NKit.swift in Sources */,
 				1815E4611D1ED5E300C1B887 /* AnyObserver+NKit.swift in Sources */,
 				1815E45B1D1ED46800C1B887 /* NKResult.swift in Sources */,

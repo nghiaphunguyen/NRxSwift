@@ -53,4 +53,14 @@ public extension Observable where Element : NKResult {
             return closure(element: element)
         }
     }
+    
+    public func nk_transform<T>() -> Observable<T> {
+        return self.flatMapLatest { (element) -> Observable<T> in
+            if let error = element.error {
+                return Observable<T>.error(error)
+            }
+            
+            return Observable<T>.just(element.value as! T)
+        }
+    }
 }
