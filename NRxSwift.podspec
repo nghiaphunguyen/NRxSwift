@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NRxSwift"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "NRxSwift provides NKObservable - non-interrupted observable."
   s.homepage     = "http://cornerteam.com"
   s.license      = "MIT"
@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
-  s.dependency 'RxSwift', '2.5.0'
+  s.dependency 'RxSwift'
 end
