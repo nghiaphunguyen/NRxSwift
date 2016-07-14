@@ -13,6 +13,8 @@ public extension Observable {
     public func nk_asNKObservable() -> NKObservable {
         return self.flatMapLatest({ (element) -> NKObservable in
             return NKObservable.nk_just(element)
+        }).catchError({ (error) -> Observable<NKResult> in
+          return NKObservable.nk_error(error)
         })
     }
 }
