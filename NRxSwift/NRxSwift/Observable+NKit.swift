@@ -19,6 +19,16 @@ public extension Observable {
     }
 }
 
+public extension Observable {
+    public static func nk_baseCreate(subscribe: NKBaseObserver<Element> -> Void) -> Observable<Element> {
+        return Observable<Element>.create({ (observer) -> Disposable in
+            let baseObserver = NKBaseObserver(anyObserver: observer)
+            subscribe(baseObserver)
+            return AnonymousDisposable {}
+        })
+    }
+}
+
 public extension Observable where Element : NKResult {
     public static func nk_create(subscribe: NKObserver -> Void) -> NKObservable {
         return NKObservable.create { (observer) -> Disposable in
