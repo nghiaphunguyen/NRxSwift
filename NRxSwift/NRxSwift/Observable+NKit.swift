@@ -9,6 +9,27 @@
 import Foundation
 import RxSwift
 
+public enum NKRxResult<T> {
+    case Disposed
+    case Completed
+    case Error(ErrorType)
+    case Next(T)
+}
+
+public extension Observable {
+    public func nk_subscribe(onResult: (result: NKRxResult<Element>) -> Void) -> Disposable {
+        return self.subscribe(onNext: { (element) -> Void in
+            onResult(result: NKRxResult.Next(element))
+            }, onError: { (error) -> Void in
+                onResult(result: NKRxResult.Error(error))
+            }, onCompleted: { () -> Void in
+                onResult(result: NKRxResult.Completed)
+            }, onDisposed: { () -> Void in
+                onResult(result: NKRxResult.Disposed)
+        })
+    }
+}
+
 public extension Observable {
     public func nk_asNKObservable() -> NKObservable {
         return self.flatMapLatest({ (element) -> NKObservable in

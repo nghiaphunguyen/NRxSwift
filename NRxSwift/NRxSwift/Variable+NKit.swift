@@ -13,4 +13,9 @@ public extension Variable {
     public func nk_asNKObservable() -> NKObservable {
         return self.asObservable().nk_asNKObservable()
     }
+    
+    public func nk_reload() {
+        let val = self.value
+        self.value = val
+    }
 }
