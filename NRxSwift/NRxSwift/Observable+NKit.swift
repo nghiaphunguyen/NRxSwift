@@ -35,6 +35,12 @@ public extension Observable {
             closure()
         })
     }
+    
+    public func nk_start(closure: () -> Observable<Element>) -> Observable<Element> {
+        return Observable<Element>.empty().flatMapLatest({ (element) -> Observable<Element> in
+            return closure()
+        })
+    }
 }
 
 public extension Observable where Element : NKResult {
