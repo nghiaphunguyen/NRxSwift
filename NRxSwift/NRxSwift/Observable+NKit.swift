@@ -27,6 +27,14 @@ public extension Observable {
             return AnonymousDisposable {}
         })
     }
+    
+    public func nk_doOnNextOrError(closure: () -> Void) -> Observable<Element> {
+        return self.doOnNext({ (_) in
+            closure()
+        }).self.doOnError({ (_) in
+            closure()
+        })
+    }
 }
 
 public extension Observable where Element : NKResult {
