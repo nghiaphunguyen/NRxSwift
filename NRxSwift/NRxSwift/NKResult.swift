@@ -14,6 +14,11 @@ import RxSwift
 
 public typealias NKObservable = Observable<NKResult>
 
+public enum NKResultEnum<T> {
+    case Value(T)
+    case Error(ErrorType)
+}
+
 public class NKResult: AnyObject {
     
     public private(set) var value: Any? {
@@ -36,5 +41,14 @@ public class NKResult: AnyObject {
     
     public init(error: ErrorType) {
         self.error = error
+    }
+    
+    public func toEnum<T>() -> NKResultEnum<T> {
+        if let error = self.error {
+            return NKResultEnum.Error(error)
+        }
+        
+        let value = self.value as! T
+        return NKResultEnum.Value(value)
     }
 }

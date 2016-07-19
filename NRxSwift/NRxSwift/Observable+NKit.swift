@@ -61,7 +61,6 @@ public extension Observable where Element : NKResult {
     }
     
     public func nk_continueWithSuccessCloure(closure: (element: Element) -> Observable<Element>) -> Observable<Element> {
-        
         return self.flatMapLatest { (element) -> Observable<Element> in
             let result = element as NKResult
             
@@ -74,13 +73,30 @@ public extension Observable where Element : NKResult {
     }
     
     public func nk_continueWithCloure(closure: (element: Element) -> Observable<Element>) -> Observable<Element> {
-        
         return self.flatMapLatest { (element) -> Observable<Element> in
             return closure(element: element)
         }
     }
     
-    public func nk_transform<T>() -> Observable<T> {
+    public func nk_continueWithSuccessCloure<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
+        return self.flatMapLatest { (element) -> Observable<Element> in
+            let result = element as NKResult
+            
+            if let _ = result.error {
+                return Observable.just(element)
+            }
+            
+            return closure(value: element.value as! T)
+        }
+    }
+    
+    public func nk_continueWithCloure<T>(closure: (element: NKResultEnum<T>) -> Observable<Element>) -> Observable<Element> {
+        return self.flatMapLatest { (element) -> Observable<Element> in
+            return closure(element: element.toEnum())
+        }
+    }
+    
+    public func nk_transform<T>(type: T.Type? = nil) -> Observable<T> {
         return self.flatMapLatest { (element) -> Observable<T> in
             if let error = element.error {
                 return Observable<T>.error(error)
@@ -90,7 +106,7 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_transform<T>() -> Observable<T?> {
+    public func nk_transform<T>(type: T.Type? = nil) -> Observable<T?> {
         return self.flatMapLatest { (element) -> Observable<T?> in
             if let error = element.error {
                 return Observable<T?>.error(error)
@@ -98,5 +114,11 @@ public extension Observable where Element : NKResult {
             
             return Observable<T?>.just(element.value as? T)
         }
+    }
+    
+    public func nk_subscribe<T>(closure: (element: NKResultEnum<T>) -> Void) -> Disposable {
+        return self.subscribeNext({ (element) in
+            closure(element: element.toEnum())
+        })
     }
 }
