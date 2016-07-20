@@ -117,6 +117,25 @@ public extension Observable where Element : NKResult {
         }
     }
     
+    public func nk_doOnSuccess<T>(closure: (value: T) -> Void) -> Observable<Element> {
+        return self.doOnNext { element in
+            guard element.error == nil else {
+                return
+            }
+            
+            let value = element.value as! T
+            closure(value: value)
+        }
+    }
+    
+    public func nk_doOnError(closure: (error: ErrorType) -> Void) -> Observable<Element> {
+        return self.doOnNext { element in
+            if let error = element.error {
+                closure(error: error)
+            }
+        }
+    }
+    
     public func nk_transform<T>(type: T.Type? = nil) -> Observable<T> {
         return self.flatMapLatest { (element) -> Observable<T> in
             if let error = element.error {
