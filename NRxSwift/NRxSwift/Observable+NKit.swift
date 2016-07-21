@@ -99,7 +99,7 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_continueWithSuccessCloure<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
+    public func nk_continueWithSuccessCloure2<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
         return self.flatMapLatest { (element) -> Observable<Element> in
             let result = element as NKResult
             
@@ -111,13 +111,13 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_continueWithCloure<T>(closure: (element: NKResultEnum<T>) -> Observable<Element>) -> Observable<Element> {
+    public func nk_continueWithCloure2<T>(closure: (element: NKResultEnum<T>) -> Observable<Element>) -> Observable<Element> {
         return self.flatMapLatest { (element) -> Observable<Element> in
             return closure(element: element.toEnum())
         }
     }
     
-    public func nk_doOnSuccess<T>(closure: (value: T) -> Void) -> Observable<Element> {
+    public func nk_doOnNext<T>(closure: (value: T) -> Void) -> Observable<Element> {
         return self.doOnNext { element in
             guard element.error == nil else {
                 return
