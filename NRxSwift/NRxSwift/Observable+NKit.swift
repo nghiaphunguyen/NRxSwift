@@ -17,7 +17,7 @@ public enum NKRxResult<T> {
 }
 
 public extension Observable {
-    public func nk_subscribe(onResult: (result: NKRxResult<Element>) -> Void) -> Disposable {
+    public func nk_fullSubscribe(onResult: (result: NKRxResult<Element>) -> Void) -> Disposable {
         return self.subscribe(onNext: { (element) -> Void in
             onResult(result: NKRxResult.Next(element))
             }, onError: { (error) -> Void in
@@ -58,7 +58,7 @@ public extension Observable {
     }
     
     public static func nk_start(closure: () -> Observable<Element>) -> Observable<Element> {
-        return Observable<Element>.empty().flatMapLatest({ (element) -> Observable<Element> in
+        return Observable<Int>.just(0).flatMapLatest({ (element) -> Observable<Element> in
             return closure()
         })
     }
@@ -99,7 +99,7 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_continueWithSuccessCloure2<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
+    public func nk_continueWithSuccessCloure<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
         return self.flatMapLatest { (element) -> Observable<Element> in
             let result = element as NKResult
             
@@ -111,7 +111,7 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_continueWithCloure2<T>(closure: (element: NKResultEnum<T>) -> Observable<Element>) -> Observable<Element> {
+    public func nk_continueWithCloure<T>(closure: (element: NKResultEnum<T>) -> Observable<Element>) -> Observable<Element> {
         return self.flatMapLatest { (element) -> Observable<Element> in
             return closure(element: element.toEnum())
         }
