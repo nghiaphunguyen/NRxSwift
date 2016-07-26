@@ -51,4 +51,13 @@ public class NKResult: AnyObject {
         let value = self.value as! T
         return NKResultEnum.Value(value)
     }
+    
+    public func toEnum2<T>() -> NKResultEnum<T?> {
+        if let error = self.error {
+            return NKResultEnum.Error(error)
+        }
+        
+        let value = self.value as? T
+        return NKResultEnum.Value(value)
+    }
 }

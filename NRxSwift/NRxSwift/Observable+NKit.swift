@@ -99,6 +99,18 @@ public extension Observable where Element : NKResult {
         }
     }
     
+    public func nk_continueWithSuccessCloure<T>(closure: (value: T?) -> Observable<Element>) -> Observable<Element> {
+        return self.flatMapLatest { (element) -> Observable<Element> in
+            let result = element as NKResult
+            
+            if let _ = result.error {
+                return Observable.just(element)
+            }
+            
+            return closure(value: element.value as? T)
+        }
+    }
+    
     public func nk_continueWithSuccessCloure<T>(closure: (value: T) -> Observable<Element>) -> Observable<Element> {
         return self.flatMapLatest { (element) -> Observable<Element> in
             let result = element as NKResult
@@ -117,7 +129,18 @@ public extension Observable where Element : NKResult {
         }
     }
     
-    public func nk_doOnNext<T>(closure: (value: T) -> Void) -> Observable<Element> {
+    public func nk_doOnSuccess<T>(closure: (value: T?) -> Void) -> Observable<Element> {
+        return self.doOnNext { element in
+            guard element.error == nil else {
+                return
+            }
+            
+            let value = element.value as? T
+            closure(value: value)
+        }
+    }
+    
+    public func nk_doOnSuccess<T>(closure: (value: T) -> Void) -> Observable<Element> {
         return self.doOnNext { element in
             guard element.error == nil else {
                 return
@@ -159,6 +182,12 @@ public extension Observable where Element : NKResult {
     public func nk_subscribe<T>(closure: (element: NKResultEnum<T>) -> Void) -> Disposable {
         return self.subscribeNext({ (element) in
             closure(element: element.toEnum())
+        })
+    }
+    
+    public func nk_subscribe<T>(closure: (element: NKResultEnum<T?>) -> Void) -> Disposable {
+        return self.subscribeNext({ (element) in
+            closure(element: element.toEnum2())
         })
     }
 }
