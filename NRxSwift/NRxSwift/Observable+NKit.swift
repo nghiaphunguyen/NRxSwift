@@ -49,6 +49,12 @@ public extension Observable {
         })
     }
     
+    public static func nk_start(closure: () -> Observable<Element>) -> Observable<Element> {
+        return Observable<Int>.just(0).flatMapLatest({ (element) -> Observable<Element> in
+            return closure()
+        })
+    }
+    
     public func nk_doOnNextOrError(closure: () -> Void) -> Observable<Element> {
         return self.doOnNext({ (_) in
             closure()
@@ -56,11 +62,11 @@ public extension Observable {
             closure()
         })
     }
-    
-    public static func nk_start(closure: () -> Observable<Element>) -> Observable<Element> {
-        return Observable<Int>.just(0).flatMapLatest({ (element) -> Observable<Element> in
-            return closure()
-        })
+}
+
+public extension Observable where Element: NKOptional {
+    public func nk_unwrap() -> Observable<Element.Wrapped> {
+        return self.filter({$0.value != nil}).map {$0.value!}
     }
 }
 
