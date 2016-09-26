@@ -63,7 +63,7 @@ public extension Observable {
         })
     }
     
-    public func ignoreError() -> Observable<Element> {
+    public func nk_ignoreError() -> Observable<Element> {
         return self.catchError {_ in return Observable.empty()}
     }
 }
