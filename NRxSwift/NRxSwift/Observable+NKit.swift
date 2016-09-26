@@ -62,6 +62,10 @@ public extension Observable {
             closure()
         })
     }
+    
+    public func ignoreError() -> Observable<Element> {
+        return self.catchError {_ in return Observable.empty()}
+    }
 }
 
 public extension Observable where Element: NKOptional {
