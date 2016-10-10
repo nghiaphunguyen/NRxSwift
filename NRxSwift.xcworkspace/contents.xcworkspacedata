@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NRxSwiftDemo/NRxSwiftDemo.xcodeproj">
+      location = "group:NRxSwift.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:NRxSwift/NRxSwift.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

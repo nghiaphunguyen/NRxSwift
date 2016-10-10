@@ -9,19 +9,19 @@
 import Foundation
 import RxSwift
 
-public class NKBaseObserver<T>: AnyObject {
-    public let anyObserver: AnyObserver<T>
+open class NKBaseObserver<T>: AnyObject {
+    open let anyObserver: AnyObserver<T>
 
     public init(anyObserver: AnyObserver<T>) {
         self.anyObserver = anyObserver
     }
 
-    public func nk_setValue(value: T) {
+    open func nk_setValue(_ value: T) {
         self.anyObserver.onNext(value)
         self.anyObserver.onCompleted()
     }
 
-    public func nk_setError(error: ErrorType) {
+    open func nk_setError(_ error: Error) {
         self.anyObserver.onError(error)
     }
 }

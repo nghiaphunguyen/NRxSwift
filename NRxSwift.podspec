@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NRxSwift"
-  s.version      = "0.2.10"
+  s.version      = "1.0.0"
   s.summary      = "NRxSwift provides NKObservable - non-interrupted observable."
   s.homepage     = "http://cornerteam.com"
   s.license      = "MIT"
@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/nghiaphunguyen/NRxSwift", :tag => s.version}
-  s.source_files  = "Classes", "NRxSwift/NRxSwift/**/*.{swift}"
+  s.source_files  = "Classes", "NRxSwift/Source/**/*.{swift}"
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
-  s.dependency 'RxSwift'
+  s.dependency 'RxSwift', '3.0.0.beta.2'
 end

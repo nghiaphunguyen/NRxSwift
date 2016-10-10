@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18857D6F1DAB847E00C84608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D6E1DAB847E00C84608 /* AppDelegate.swift */; };
+		18857D711DAB847E00C84608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D701DAB847E00C84608 /* ViewController.swift */; };
+		18857D741DAB847E00C84608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18857D721DAB847E00C84608 /* Main.storyboard */; };
+		18857D761DAB847E00C84608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18857D751DAB847E00C84608 /* Assets.xcassets */; };
+		18857D791DAB847E00C84608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18857D771DAB847E00C84608 /* LaunchScreen.storyboard */; };
+		18857D881DAB85F500C84608 /* AnyObserver+NKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D811DAB85F500C84608 /* AnyObserver+NKit.swift */; };
+		18857D891DAB85F500C84608 /* NKBaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D821DAB85F500C84608 /* NKBaseObserver.swift */; };
+		18857D8A1DAB85F500C84608 /* NKObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D831DAB85F500C84608 /* NKObserver.swift */; };
+		18857D8B1DAB85F500C84608 /* NKOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D841DAB85F500C84608 /* NKOptional.swift */; };
+		18857D8C1DAB85F500C84608 /* NKResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D851DAB85F500C84608 /* NKResult.swift */; };
+		18857D8D1DAB85F500C84608 /* Observable+NKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D861DAB85F500C84608 /* Observable+NKit.swift */; };
+		18857D8E1DAB85F500C84608 /* Variable+NKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D871DAB85F500C84608 /* Variable+NKit.swift */; };
+		6AB126581387E0EA473BEF3A /* Pods_NRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7594BFD36D0C5186B81C3 /* Pods_NRxSwift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18857D6B1DAB847E00C84608 /* NRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18857D6E1DAB847E00C84608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18857D701DAB847E00C84608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18857D731DAB847E00C84608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18857D751DAB847E00C84608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18857D781DAB847E00C84608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18857D7A1DAB847E00C84608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18857D811DAB85F500C84608 /* AnyObserver+NKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyObserver+NKit.swift"; sourceTree = "<group>"; };
+		18857D821DAB85F500C84608 /* NKBaseObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKBaseObserver.swift; sourceTree = "<group>"; };
+		18857D831DAB85F500C84608 /* NKObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKObserver.swift; sourceTree = "<group>"; };
+		18857D841DAB85F500C84608 /* NKOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKOptional.swift; sourceTree = "<group>"; };
+		18857D851DAB85F500C84608 /* NKResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKResult.swift; sourceTree = "<group>"; };
+		18857D861DAB85F500C84608 /* Observable+NKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+NKit.swift"; sourceTree = "<group>"; };
+		18857D871DAB85F500C84608 /* Variable+NKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Variable+NKit.swift"; sourceTree = "<group>"; };
+		76E7594BFD36D0C5186B81C3 /* Pods_NRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74244A4E383A5CACC16D51D /* Pods-NRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NRxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-NRxSwift/Pods-NRxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		D0A4DCAEAD138B794080B640 /* Pods-NRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NRxSwift/Pods-NRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18857D681DAB847E00C84608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB126581387E0EA473BEF3A /* Pods_NRxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18857D621DAB847D00C84608 = {
+			isa = PBXGroup;
+			children = (
+				18857D6D1DAB847E00C84608 /* NRxSwift */,
+				18857D6C1DAB847E00C84608 /* Products */,
+				1F5C8886DEC6AB9C4B778D6E /* Pods */,
+				EE3D933220C2FD2F6437A63D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18857D6C1DAB847E00C84608 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18857D6B1DAB847E00C84608 /* NRxSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18857D6D1DAB847E00C84608 /* NRxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				18857D801DAB85F500C84608 /* Source */,
+				18857D6E1DAB847E00C84608 /* AppDelegate.swift */,
+				18857D701DAB847E00C84608 /* ViewController.swift */,
+				18857D721DAB847E00C84608 /* Main.storyboard */,
+				18857D751DAB847E00C84608 /* Assets.xcassets */,
+				18857D771DAB847E00C84608 /* LaunchScreen.storyboard */,
+				18857D7A1DAB847E00C84608 /* Info.plist */,
+			);
+			path = NRxSwift;
+			sourceTree = "<group>";
+		};
+		18857D801DAB85F500C84608 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				18857D811DAB85F500C84608 /* AnyObserver+NKit.swift */,
+				18857D821DAB85F500C84608 /* NKBaseObserver.swift */,
+				18857D831DAB85F500C84608 /* NKObserver.swift */,
+				18857D841DAB85F500C84608 /* NKOptional.swift */,
+				18857D851DAB85F500C84608 /* NKResult.swift */,
+				18857D861DAB85F500C84608 /* Observable+NKit.swift */,
+				18857D871DAB85F500C84608 /* Variable+NKit.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1F5C8886DEC6AB9C4B778D6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0A4DCAEAD138B794080B640 /* Pods-NRxSwift.debug.xcconfig */,
+				A74244A4E383A5CACC16D51D /* Pods-NRxSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE3D933220C2FD2F6437A63D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76E7594BFD36D0C5186B81C3 /* Pods_NRxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18857D6A1DAB847E00C84608 /* NRxSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18857D7D1DAB847E00C84608 /* Build configuration list for PBXNativeTarget "NRxSwift" */;
+			buildPhases = (
+				DA1A8D506FEB7199D24F8908 /* [CP] Check Pods Manifest.lock */,
+				18857D671DAB847E00C84608 /* Sources */,
+				18857D681DAB847E00C84608 /* Frameworks */,
+				18857D691DAB847E00C84608 /* Resources */,
+				3BD73CFF59C1CDBF0AF23F7C /* [CP] Embed Pods Frameworks */,
+				C77C1021A4C5909A6AB554E3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NRxSwift;
+			productName = NRxSwift;
+			productReference = 18857D6B1DAB847E00C84608 /* NRxSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18857D631DAB847D00C84608 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Nghia Nguyen";
+				TargetAttributes = {
+					18857D6A1DAB847E00C84608 = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18857D661DAB847D00C84608 /* Build configuration list for PBXProject "NRxSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18857D621DAB847D00C84608;
+			productRefGroup = 18857D6C1DAB847E00C84608 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18857D6A1DAB847E00C84608 /* NRxSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18857D691DAB847E00C84608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18857D791DAB847E00C84608 /* LaunchScreen.storyboard in Resources */,
+				18857D761DAB847E00C84608 /* Assets.xcassets in Resources */,
+				18857D741DAB847E00C84608 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BD73CFF59C1CDBF0AF23F7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NRxSwift/Pods-NRxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77C1021A4C5909A6AB554E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NRxSwift/Pods-NRxSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA1A8D506FEB7199D24F8908 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18857D671DAB847E00C84608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18857D881DAB85F500C84608 /* AnyObserver+NKit.swift in Sources */,
+				18857D8A1DAB85F500C84608 /* NKObserver.swift in Sources */,
+				18857D8B1DAB85F500C84608 /* NKOptional.swift in Sources */,
+				18857D8E1DAB85F500C84608 /* Variable+NKit.swift in Sources */,
+				18857D711DAB847E00C84608 /* ViewController.swift in Sources */,
+				18857D6F1DAB847E00C84608 /* AppDelegate.swift in Sources */,
+				18857D8C1DAB85F500C84608 /* NKResult.swift in Sources */,
+				18857D8D1DAB85F500C84608 /* Observable+NKit.swift in Sources */,
+				18857D891DAB85F500C84608 /* NKBaseObserver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18857D721DAB847E00C84608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18857D731DAB847E00C84608 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18857D771DAB847E00C84608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18857D781DAB847E00C84608 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18857D7B1DAB847E00C84608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18857D7C1DAB847E00C84608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18857D7E1DAB847E00C84608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A4DCAEAD138B794080B640 /* Pods-NRxSwift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NRxSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cornerteam.NRxSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		18857D7F1DAB847E00C84608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74244A4E383A5CACC16D51D /* Pods-NRxSwift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NRxSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cornerteam.NRxSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18857D661DAB847D00C84608 /* Build configuration list for PBXProject "NRxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18857D7B1DAB847E00C84608 /* Debug */,
+				18857D7C1DAB847E00C84608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18857D7D1DAB847E00C84608 /* Build configuration list for PBXNativeTarget "NRxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18857D7E1DAB847E00C84608 /* Debug */,
+				18857D7F1DAB847E00C84608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18857D631DAB847D00C84608 /* Project object */;
+}

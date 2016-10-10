@@ -10,13 +10,13 @@ import Foundation
 import RxSwift
 
 public extension AnyObserver where Element : NKResult {
-    public func nk_setValue(value: Any?) {
+    public func nk_setValue(_ value: Any?) {
         let value = NKResult(value: value) as! Element
         self.onNext(value)
         self.onCompleted()
     }
     
-    public func nk_setError(error: ErrorType) {
+    public func nk_setError(_ error: Error) {
         let errorResult = NKResult(error: error) as! Element
         self.onNext(errorResult)
         self.onCompleted()

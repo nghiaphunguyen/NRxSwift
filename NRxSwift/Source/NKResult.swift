@@ -15,21 +15,21 @@ import RxSwift
 public typealias NKObservable = Observable<NKResult>
 
 public enum NKResultEnum<T> {
-    case Value(T)
-    case Error(ErrorType)
+    case value(T)
+    case error(Error)
 }
 
-public class NKResult: AnyObject {
+open class NKResult: AnyObject {
     
-    public private(set) var value: Any? {
+    open fileprivate(set) var value: Any? {
         didSet {
-            self.type = self.value.dynamicType.self
+            self.type = type(of: self.value)
         }
     }
-    public private(set) var type: Any.Type?
-    public private(set) var error: ErrorType?
+    open fileprivate(set) var type: Any.Type?
+    open fileprivate(set) var error: Error?
     
-    public static var Empty: NKResult {
+    open static var Empty: NKResult {
         return NKResult()
     }
     
@@ -39,25 +39,25 @@ public class NKResult: AnyObject {
         self.value = value
     }
     
-    public init(error: ErrorType) {
+    public init(error: Error) {
         self.error = error
     }
     
-    public func toEnum<T>() -> NKResultEnum<T> {
+    open func toEnum<T>() -> NKResultEnum<T> {
         if let error = self.error {
-            return NKResultEnum.Error(error)
+            return NKResultEnum.error(error)
         }
         
         let value = self.value as! T
-        return NKResultEnum.Value(value)
+        return NKResultEnum.value(value)
     }
     
-    public func toEnum2<T>() -> NKResultEnum<T?> {
+    open func toEnum2<T>() -> NKResultEnum<T?> {
         if let error = self.error {
-            return NKResultEnum.Error(error)
+            return NKResultEnum.error(error)
         }
         
         let value = self.value as? T
-        return NKResultEnum.Value(value)
+        return NKResultEnum.value(value)
     }
 }
