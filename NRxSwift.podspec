@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
-  s.dependency 'RxSwift', '3.0.0.beta.2'
+  s.dependency 'RxSwift'
 end

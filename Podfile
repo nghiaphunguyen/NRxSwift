@@ -6,7 +6,7 @@ target 'NRxSwift' do
   use_frameworks!
 
   # Pods for NRxSwift
-pod 'RxSwift', '3.0.0.beta.2'
+pod 'RxSwift'
 
 end
 
