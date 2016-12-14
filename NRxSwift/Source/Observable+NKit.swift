@@ -203,3 +203,47 @@ public extension Observable where Element : NKResult {
         })
     }
 }
+
+public extension Observable {
+    public static func nk_from<T>(_ function: @escaping () -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function())
+        })
+    }
+    
+    public static func nk_from<T, A>(_ a: A, _ function: @escaping (A) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a))
+        })
+    }
+    
+    public static func nk_from<T, A, B>(_ a: A, b: B, _ function: @escaping (A, B) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a, b))
+        })
+    }
+    
+    public static func nk_from<T, A, B, C>(_ a: A, _ b: B, _ c: C, _ function: @escaping (A, B, C) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a, b ,c))
+        })
+    }
+    
+    public static func nk_from<T, A, B, C ,D>(_ a: A, _ b: B, _ c: C, _ d: D, _ function: @escaping (A, B, C, D) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a, b, c, d))
+        })
+    }
+    
+    public static func nk_from<T, A, B, C, D, E>(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ function: @escaping (A, B, C, D, E) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a, b, c, d, e))
+        })
+    }
+    
+    public static func nk_from<T, A, B, C, D, E, F>(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F, _ function: @escaping (A, B, C, D, E, F) -> T) -> Observable<T> {
+        return Observable<T>.nk_baseCreate({ (observer) in
+            observer.nk_setValue(function(a, b, c, d, e, f))
+        })
+    }
+}
