@@ -246,4 +246,18 @@ public extension Observable {
             observer.nk_setValue(function(a, b, c, d, e, f))
         })
     }
+    
+    public func nk_observeOnMainQueue() -> Observable<Element> {
+        return self.observeOn(MainScheduler.instance)
+    }
+    
+    public func nk_observeOnQueue(queue: DispatchQueue) -> Observable<Element> {
+        return self.flatMapLatest({ element in
+            return Observable<Element>.nk_baseCreate({ (observer) in
+                queue.async {
+                    observer.nk_setValue(element)
+                }
+            })
+        })
+    }
 }
