@@ -18,4 +18,8 @@ public extension Variable {
         let val = self.value
         self.value = val
     }
+    
+    public var nk_variable: NKVariable<E> {
+        return NKVariable(variable: self)
+    }
 }

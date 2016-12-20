@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1878957F1E090D4A001C8DB8 /* NKVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878957E1E090D4A001C8DB8 /* NKVariable.swift */; };
 		18857D6F1DAB847E00C84608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D6E1DAB847E00C84608 /* AppDelegate.swift */; };
 		18857D711DAB847E00C84608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857D701DAB847E00C84608 /* ViewController.swift */; };
 		18857D741DAB847E00C84608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18857D721DAB847E00C84608 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1878957E1E090D4A001C8DB8 /* NKVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKVariable.swift; sourceTree = "<group>"; };
 		18857D6B1DAB847E00C84608 /* NRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18857D6E1DAB847E00C84608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18857D701DAB847E00C84608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				18857D851DAB85F500C84608 /* NKResult.swift */,
 				18857D861DAB85F500C84608 /* Observable+NKit.swift */,
 				18857D871DAB85F500C84608 /* Variable+NKit.swift */,
+				1878957E1E090D4A001C8DB8 /* NKVariable.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				18857D881DAB85F500C84608 /* AnyObserver+NKit.swift in Sources */,
 				18857D8A1DAB85F500C84608 /* NKObserver.swift in Sources */,
+				1878957F1E090D4A001C8DB8 /* NKVariable.swift in Sources */,
 				18857D8B1DAB85F500C84608 /* NKOptional.swift in Sources */,
 				18857D8E1DAB85F500C84608 /* Variable+NKit.swift in Sources */,
 				18857D711DAB847E00C84608 /* ViewController.swift in Sources */,
