@@ -28,7 +28,6 @@ public extension Observable {
                 onResult(NKRxResult.disposed)
         })
     }
-    
 }
 
 public extension Observable {
@@ -56,10 +55,43 @@ public extension Observable {
         })
     }
     
+    public func nk_subscribe(onNext: @escaping (Element) -> Void) -> Disposable {
+        return self.nk_subscribe(onNext: onNext, onError: nil)
+    }
+    
+    public func nk_subscribe(onNext: @escaping (Element) -> Void, onError: ((Error) -> Void)?) -> Disposable {
+        return self.subscribe(onNext: onNext, onError: onError)
+    }
+    
+    public func nk_debug(_ closure: @escaping (Element) -> Void) -> Observable<Element> {
+        return self.map({
+            closure($0)
+            return $0
+        })
+    }
+    
     public func nk_doOnNextOrError(_ closure: @escaping () -> Void) -> Observable<Element> {
-        return self.do(onNext: { (_) in
+        return self.do(onNext: { _ in
             closure()
-        }).self.do(onError: { (_) in
+        }, onError: { _ in
+            closure()
+        })
+    }
+    
+    public func nk_doOnCompleteOrError(_ closure: @escaping () -> Void) -> Observable<Element> {
+        return self.do(onError: { _ in
+            closure()
+        }, onCompleted: {
+            closure()
+        })
+    }
+    
+    public func nk_doOnNextOrCompleteOrError(_ closure: @escaping () -> Void) -> Observable<Element> {
+        return self.do(onNext: { _ in
+            closure()
+        }, onError: { _ in
+            closure()
+        }, onCompleted: {
             closure()
         })
     }
