@@ -283,6 +283,10 @@ public extension Observable {
         return self.observeOn(MainScheduler.instance)
     }
     
+    public func nk_observeAsyncOnMainQueue() -> Observable<Element> {
+        return self.observeOn(MainScheduler.asyncInstance)
+    }
+    
     public func nk_observeOnQueue(queue: DispatchQueue) -> Observable<Element> {
         return self.flatMapLatest({ element in
             return Observable<Element>.nk_baseCreate({ (observer) in

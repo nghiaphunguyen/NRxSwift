@@ -22,4 +22,16 @@ public extension Variable {
     public var nk_variable: NKVariable<E> {
         return NKVariable(variable: self)
     }
+    
+    public func nk_asyncReload(queue: DispatchQueue = DispatchQueue.main) {
+        queue.async { [weak self] in
+            self?.nk_reload()
+        }
+    }
+    
+    public func nk_asyncSet(value: E, queue: DispatchQueue = DispatchQueue.main) {
+        queue.async { [weak self] in
+            self?.value = value
+        }
+    }
 }
