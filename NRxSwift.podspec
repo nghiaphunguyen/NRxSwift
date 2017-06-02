@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NRxSwift"
-  s.version      = "1.0.19"
+  s.version      = "1.0.20"
   s.summary      = "NRxSwift provides NKObservable - non-interrupted observable."
   s.homepage     = "http://cornerteam.com"
   s.license      = "MIT"

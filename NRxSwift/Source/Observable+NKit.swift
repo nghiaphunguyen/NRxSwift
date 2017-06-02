@@ -117,7 +117,7 @@ public extension Observable where Element : NKResult {
     }
     
     public static func nk_error(_ error: Error) -> NKObservable {
-        return NKObservable.just(NKResult(value: error))
+        return NKObservable.just(NKResult(error: error))
     }
     
     public static func nk_just(_ value: Any?) -> NKObservable {
